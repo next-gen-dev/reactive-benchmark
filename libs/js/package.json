@@ -1,0 +1,17 @@
+{
+  "name": "reactive-bench",
+  "version": "0.1.0",
+  "description": "Specs and Benchmarking for reactive programming",
+  "main": "index.js",
+  "repository": "https://github.com/andreterron/reactive-bench",
+  "author": "Andre Terron <git@terron.me>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "mobx": "^6.1.7",
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.2"
+  }
+}
