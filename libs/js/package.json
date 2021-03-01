@@ -1,17 +1,29 @@
 {
-  "name": "reactive-bench",
-  "version": "0.1.0",
-  "description": "Specs and Benchmarking for reactive programming",
-  "main": "index.js",
-  "repository": "https://github.com/andreterron/reactive-bench",
-  "author": "Andre Terron <git@terron.me>",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "mobx": "^6.1.7",
-    "rxjs": "^6.6.3"
-  },
-  "devDependencies": {
-    "typescript": "^4.2.2"
-  }
+    "name": "reactive-bench",
+    "version": "0.1.0",
+    "description": "Specs and Benchmarking for reactive programming",
+    "main": "index.js",
+    "repository": "https://github.com/andreterron/reactive-bench",
+    "author": "Andre Terron <git@terron.me>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "test": "mocha -r ts-node/register index.ts",
+        "dev": "mocha --watch-extensions ts -r ts-node/register -R mochawesome -r mochawesome/register -w -watch-files ./**/*.ts index.ts",
+        "server": "cd mochawesome-report && live-server --port=8080 --no-browser --wait=200"
+    },
+    "dependencies": {
+        "mobx": "^6.1.7",
+        "rxjs": "^6.6.3",
+        "ts-node": "^9.1.1"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.15",
+        "@types/mocha": "^8.2.1",
+        "chai": "^4.3.0",
+        "live-server": "^1.2.1",
+        "mocha": "^8.3.0",
+        "mochawesome": "^6.2.2",
+        "typescript": "^4.2.2"
+    }
 }

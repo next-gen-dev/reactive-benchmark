@@ -1,6 +1,8 @@
-interface Translator<R, T> {
+// TODO: might want to not use types here
+
+export interface Translator<R, T> {
     // Create
-    reactive(): R;
+//     reactive(): R;
     reactive(v: T): R;
 
     // Subscribe
@@ -8,10 +10,10 @@ interface Translator<R, T> {
         reactive: R,
         next: (v: T) => void,
         error?: (e: any) => void
-    ): () => {};
+    ): () => void;
 
     // Operators
-    map<S>(reactive: R, transform: (v: T) => S): R;
-    flatMap(reactive: R, transform: (v: T) => R): R;
-    combine(reactives: R[]): R;
+    map?<S>(reactive: R, transform: (v: T) => S): R;
+    flatMap?(reactive: R, transform: (v: T) => R): R;
+    combine?(reactives: R[]): R;
 }
