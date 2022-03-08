@@ -56,7 +56,7 @@ Now, let's trigger a change in `X`, which will cause the value of `Y` to change 
 ```mermaid
     graph LR;
         X(X) -.-> Y(Y) -.-> A(A) -.-> Z(Z)
-        style A fill:mediumaquamarine,stroke:green
+        style A fill:mediumaquamarine,stroke:green,color:black
 ```
 
 And it would result in the following final dependency graph:

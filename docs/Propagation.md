@@ -16,7 +16,7 @@ Consider the following graph:
 ```mermaid
     graph LR;;
         A(A)-.->B(B)-.->C(C)-.->X(X)
-        style C fill:mediumaquamarine,stroke:green
+        style C fill:mediumaquamarine,stroke:green,color:black
 ```
 
 or
@@ -24,7 +24,7 @@ or
 ```mermaid
     graph LR;;
         A(A)-.->C(C)-.->B(B)-.->X(X)
-        style C fill:mediumaquamarine,stroke:green
+        style C fill:mediumaquamarine,stroke:green,color:black
 ```
 
 Note that the order between `B` and `C` doesn't matter, because there's no dependency between them
@@ -34,8 +34,8 @@ Note that the order between `B` and `C` doesn't matter, because there's no depen
 ```mermaid
     graph LR;;
         A(A)-.->B(B)-.->X1("X¹")-.->C(C)-.->X2("X²");
-        style X1 fill:pink,stroke:red
-        style X2 fill:pink,stroke:red
+        style X1 fill:pink,stroke:red,color:black
+        style X2 fill:pink,stroke:red,color:black
 ```
 
 Notice that `X` would be executed twice, and in the first execution, `X¹` would have an outdated value for `C`, since it hasn't been calculated yet. This could result in glitches where an invalid intermediate value is emitted.
@@ -57,8 +57,8 @@ A Breadth-First execution order could look like this:
 ```mermaid
     graph LR;
         A(A)-.->B(B)-.->C(C)-.->X1("X¹")-.->D(D)-.->X2("X²");
-        style X1 fill:pink,stroke:red
-        style X2 fill:pink,stroke:red
+        style X1 fill:pink,stroke:red,color:black
+        style X2 fill:pink,stroke:red,color:black
 ```
 
 ## 2.3 - Topological Execution Order
