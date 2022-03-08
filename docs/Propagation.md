@@ -11,7 +11,7 @@ Consider the following graph:
         A(A) --> B(B) & C(C) --> X;
 ```
 
-##### Expected Execution Order:
+**Expected Execution Order:**
 
 ```mermaid
     graph LR;;
@@ -29,7 +29,7 @@ or
 
 Note that the order between `B` and `C` doesn't matter, because there's no dependency between them
 
-##### Actual Order with Immediate Execution:
+**Actual Order with Immediate Execution:**
 
 ```mermaid
     graph LR;;

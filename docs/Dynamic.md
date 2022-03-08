@@ -56,7 +56,7 @@ Now, let's trigger a change in `X`, which will cause the value of `Y` to change 
 ```mermaid
     graph LR;
         X(X) -.-> Y(Y) -.-> A(A) -.-> Z(Z)
-        style A fill:mediumaquamarine,stroke:green,color:black
+        style A fill:pink,stroke:red,color:black
 ```
 
 And it would result in the following final dependency graph:
@@ -119,7 +119,7 @@ And once we finish this layer, `Z₁` will update it's dependency from `A` to `B
         B(B) -.-> Z("Z₂")
 ```
 
-##### Pseudo-Algorithm:
+**Pseudo-Algorithm:**
 
 -   Sort the nodes topologically, ensuring all leafs are at the end of the list
 -   Start on the leaf nodes, and set their layer to 0
@@ -128,6 +128,6 @@ And once we finish this layer, `Z₁` will update it's dependency from `A` to `B
     -   For dependency-defining dependencies (`Y -> Z`), set the dependency's layer to the dependent's layer + 1, if it's larger than the current layer of the dependency
 -   Start the execution from the largest layer
 
-##### Problem:
+**Problem:**
 
 -   This algorithm could end up sorting a bunch of nodes in layers that might be updated depending on higher layers. Ideally should only calculate the first layer.
