@@ -45,6 +45,7 @@ Topics to Expand and Explore:
 -   Reducibles (receive events instead of the current value)
     -   Event-only propagation
     -   Hybrid propagation
+-   Circular Dependencies
 
 ## Inspiration
 

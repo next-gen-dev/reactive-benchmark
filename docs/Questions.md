@@ -6,3 +6,4 @@
     -   As nodes are calculated, they are removed from the dirty pile
     -   Example: `Z` will request request `Y`, and only when `Y` returns `"B"`, that `Z` will resume it's execution and request the value of `B`
     -   This algorithm would need some way of defining parallel dependencies
+-   The Layered Topological Sorting algorithm still needs to be tested against possible deadlocks
