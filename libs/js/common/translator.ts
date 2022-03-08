@@ -2,14 +2,13 @@
 
 export interface Translator<R, T> {
     // Create
-//     reactive(): R;
     reactive(v: T): R;
 
     // Subscribe
     subscribe(
         reactive: R,
         next: (v: T) => void,
-        error?: (e: any) => void
+        error?: (e: any) => void,
     ): () => void;
 
     // Operators
